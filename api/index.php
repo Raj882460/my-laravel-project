@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
-// Environment variables override for Vercel
+// Force serverless runtime environments
 putenv('LOG_CHANNEL=stderr');
 putenv('VIEW_COMPILED_PATH=/tmp');
 putenv('SESSION_DRIVER=cookie');
@@ -26,7 +26,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
-// Valid storage path override
 $app->useStoragePath($appStorage);
 
 $kernel = $app->make(Kernel::class);
