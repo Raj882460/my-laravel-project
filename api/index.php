@@ -2,11 +2,18 @@
 
 define('LARAVEL_START', microtime(true));
 
+// Force system environment variables
 putenv('LOG_CHANNEL=stderr');
 putenv('VIEW_COMPILED_PATH=/tmp');
 putenv('SESSION_DRIVER=cookie');
 putenv('CACHE_DRIVER=array');
 putenv('APP_STORAGE=/tmp');
+putenv('APP_URL=https://my-laravel-project-eosin.vercel.app');
+
+// Force HTTPS for assets on Vercel
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
 
 $dirs = [
     '/tmp/framework/views',
