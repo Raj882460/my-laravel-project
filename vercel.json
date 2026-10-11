@@ -12,6 +12,14 @@
   ],
   "routes": [
     {
+      "src": "/(css|js|images|assets|build|storage)/(.*)",
+      "dest": "/public/$1/$2"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/public/favicon.ico"
+    },
+    {
       "src": "/(.*)",
       "dest": "api/index.php"
     }
