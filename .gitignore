@@ -17,3 +17,4 @@ yarn-error.log
 !/bootstrap/cache/.gitignore
 !/bootstrap/cache/packages.php
 !/bootstrap/cache/services.php
+!.gitignore
