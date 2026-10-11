@@ -2,7 +2,6 @@
 
 define('LARAVEL_START', microtime(true));
 
-// Force system environment variables
 putenv('LOG_CHANNEL=stderr');
 putenv('VIEW_COMPILED_PATH=/tmp');
 putenv('SESSION_DRIVER=cookie');
