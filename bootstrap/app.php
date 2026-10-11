@@ -15,10 +15,7 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
-// Check if running on Vercel environment
-if (isset($_ENV['VERCEL']) || getenv('VERCEL')) {
-    $app->useBootstrapPath('/tmp/bootstrap');
-}
+
 
 /*
 |--------------------------------------------------------------------------
