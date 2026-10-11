@@ -1,35 +1,38 @@
 <?php
 
-use Illuminate\Contracts\Http\Kernel;
-use Illuminate\Http\Request;
-
 define('LARAVEL_START', microtime(true));
 
+// Force system environment variables
 putenv('LOG_CHANNEL=stderr');
 putenv('VIEW_COMPILED_PATH=/tmp');
 putenv('SESSION_DRIVER=cookie');
 putenv('CACHE_DRIVER=array');
+putenv('APP_STORAGE=/tmp');
 
-$storageDir = '/tmp/storage';
-if (!is_dir($storageDir)) {
-    @mkdir($storageDir . '/framework/views', 0755, true);
-    @mkdir($storageDir . '/framework/sessions', 0755, true);
-    @mkdir($storageDir . '/framework/cache', 0755, true);
-    @mkdir($storageDir . '/logs', 0755, true);
+$dirs = [
+    '/tmp/framework/views',
+    '/tmp/framework/sessions',
+    '/tmp/framework/cache',
+    '/tmp/logs',
+    '/tmp/bootstrap/cache'
+];
+
+foreach ($dirs as $dir) {
+    if (!is_dir($dir)) {
+        @mkdir($dir, 0755, true);
+    }
 }
-
-putenv("APP_STORAGE={$storageDir}");
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
-$app->useStoragePath($storageDir);
+$app->useStoragePath('/tmp');
 
-$kernel = $app->make(Kernel::class);
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
 $response = $kernel->handle(
-    $request = Request::capture()
+    $request = Illuminate\Http\Request::capture()
 )->send();
 
 $kernel->terminate($request, $response);
