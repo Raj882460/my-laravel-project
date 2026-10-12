@@ -262,7 +262,7 @@ button { cursor: pointer; }
   position: absolute;
   top: calc(100% + 5px);
   right: 0;
-  width: 400px;
+  width: 360px;
   max-height: 600px;
   overflow-y: auto;
   background: var(--white);
