@@ -593,11 +593,44 @@ button { cursor: pointer; }
   font-family: var(--font-ui); font-size: 12px; font-weight: 700;
   position: relative;
 }
-.cart-count {
+/* .cart-count {
   display: inline-grid; place-items: center;
   min-width: 16px; height: 16px; padding: 0 4px;
   border-radius: 8px; background: var(--black); color: var(--white);
   font-size: 10px;
+} */
+
+/* Parent button ko position relative dein */
+#cart-toggle {
+  position: relative !important;
+}
+
+/* Outer span ko display karwayein par "Cart" text ko chhupayein */
+#cart-toggle>span {
+  display: inline-block !important;
+  font-size: 0 !important;
+  /* Isse "Cart" word hidden ho jayega */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Cart Badge Badge (b.cart-count) Positioning */
+.cart-count {
+  position: absolute !important;
+  top: -8px !important;
+  right: -8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  padding: 0 4px !important;
+  border-radius: 50% !important;
+  background: var(--black, #000) !important;
+  color: var(--white, #fff) !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  z-index: 10 !important;
 }
 .header__whatsapp {
   display: inline-flex; align-items: center; gap: 4px;
