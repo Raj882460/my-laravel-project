@@ -65,8 +65,7 @@ button { cursor: pointer; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* height: var(--btn-h); */
-  height: auto;
+  height: var(--btn-h);
   background: var(--black);
   color: var(--white);
   border: 0;
