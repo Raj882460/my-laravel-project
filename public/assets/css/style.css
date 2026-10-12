@@ -65,7 +65,8 @@ button { cursor: pointer; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: var(--btn-h);
+  /* height: var(--btn-h); */
+  height: auto;
   background: var(--black);
   color: var(--white);
   border: 0;
@@ -982,4 +983,24 @@ button { cursor: pointer; }
   .header__actions { margin-left: auto; }
   .footer__contact { gap: 12px; }
   .newsletter__btn { width: 100px; }
+}
+
+.card-actions {
+    margin-top: auto !important;
+    display: flex !important;
+    gap: 6px !important;
+    width: 100% !important;
+}
+
+.btn--cart {
+    height: 25px !important;
+    white-space: nowrap !important;
+    font-size: 11px !important;
+    padding: 0 8px !important;
+}
+
+.btn--wa {
+    height: 34px !important;
+    width: 34px !important;
+    flex-shrink: 0 !important;
 }
