@@ -601,18 +601,18 @@ button { cursor: pointer; }
 } */
 
 /* Parent button ko position relative dein */
-#cart-toggle {
+/* #cart-toggle {
   position: relative !important;
-}
+} */
 
 /* Outer span ko display karwayein par "Cart" text ko chhupayein */
-#cart-toggle>span {
+/* #cart-toggle>span {
   display: inline-block !important;
-  font-size: 0 !important;
+  font-size: 0 !important; */
   /* Isse "Cart" word hidden ho jayega */
-  width: 0 !important;
+  /* width: 0 !important;
   height: 0 !important;
-}
+} */
 
 /* Cart Badge Badge (b.cart-count) Positioning */
 .cart-count {
