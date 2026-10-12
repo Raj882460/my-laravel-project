@@ -384,7 +384,7 @@ button {
   position: absolute;
   top: calc(100% + 5px);
   right: 0;
-  width: 350px;
+  width: 400px;
   max-height: 600px;
   overflow-y: auto;
   background: var(--white);
@@ -1877,14 +1877,5 @@ button {
 
   .newsletter__btn {
     width: 100px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .account-dropdown {
-    left: 0 !important;
-    /* Agar center karne par cut ho to left 0 / right auto set karein */
-    right: auto !important;
-    transform: none !important;
   }
 }
