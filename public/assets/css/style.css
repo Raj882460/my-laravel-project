@@ -769,7 +769,7 @@ button { cursor: pointer; }
 
 .carousel__track--reviews {
   grid-template-columns: repeat(5, 1fr);
-  gap: 39px;
+  gap: 10px;
   max-width: 1251px;
   margin-inline: auto;
 }
