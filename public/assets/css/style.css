@@ -983,3 +983,12 @@ button { cursor: pointer; }
   .footer__contact { gap: 12px; }
   .newsletter__btn { width: 100px; }
 }
+
+@media screen and (max-width: 768px) {
+  .account-dropdown {
+    left: 0 !important;
+    /* Agar center karne par cut ho to left 0 / right auto set karein */
+    right: auto !important;
+    transform: none !important;
+  }
+}
