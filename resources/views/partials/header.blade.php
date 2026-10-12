@@ -212,16 +212,16 @@
                   @endauth
               </div>
           </div>
-          <a class="header__action" href="#" id="cart-toggle"><svg class="icon icon--lg">
+          {{-- <a class="header__action" href="#" id="cart-toggle"><svg class="icon icon--lg">
                   <use href="#i-cart" />
-              </svg><span>Cart <b class="cart-count" data-cart-count hidden>0</b></span></a>
-          {{-- <a class="header__action" href="#" id="cart-toggle">
+              </svg><span>Cart <b class="cart-count" data-cart-count hidden>0</b></span></a> --}}
+          <a class="header__action" href="#" id="cart-toggle">
               <svg class="icon icon--lg">
                   <use href="#i-cart"></use>
               </svg>
               <span>Cart</span>
               <b class="cart-count" data-cart-count>0</b>
-          </a> --}}
+          </a>
           <a class="header__whatsapp" href="https://wa.me/971557863450" target="_blank" rel="noopener"><svg
                   class="icon">
                   <use href="#i-whatsapp" />
